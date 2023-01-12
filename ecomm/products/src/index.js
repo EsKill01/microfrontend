@@ -2,8 +2,8 @@ import faker from 'faker';
 
 let products = '';
 
-for(let i = 0; i < 3; i++){
-    const name = faker.commerce.products.name();
+for(let i = 0; i < 6; i++){
+    const name = faker.commerce.product();
     products += `<div>${name}</div>`;
 
 }
