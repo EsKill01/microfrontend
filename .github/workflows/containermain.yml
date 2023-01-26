@@ -29,11 +29,13 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: us-east-2
       
-      - uses: shinyinc/action-aws-cli@v1.2
-      - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISRTIBUTION_ID }} --paths "/container/latest/index.html" --region us-east-2
+      - name: Invalidate CloudFront
+        uses: chetan/invalidate-cloudfront-action@v2
         env:
+          DISTRIBUTION: ${{ secrets.AWS_DISRTIBUTION_ID }}
+          PATHS: "/container/latest/index.html"
+          AWS_REGION: "us-east-2"
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: us-east-2
       
       
