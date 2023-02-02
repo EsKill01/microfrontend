@@ -14,6 +14,7 @@ const prodConfig = {
         new ModuleFederationPlugin({
             name: 'markerting',
             filename: 'remoteEntry.js',
+            library: { type: 'var', name: 'marketingApp' },
             exposes: {
                 './MarketingApp': './src/bootstrap'
             },
