@@ -10,7 +10,7 @@ export default () =>{
         
     <h1>Hi there new!</h1> 
     <hr />
-        
+        <MarketingApp />
     </div>)
     
     
