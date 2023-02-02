@@ -3,6 +3,8 @@ name: deploy-marketing
 on:
   push:
     branches: ["main"]
+    paths:
+      -'mfp/packages/marketing/**'
   pull_request:
     branches: [ "main" ]
     paths:
