@@ -6,7 +6,14 @@ export default () => {
     const ref = useRef(null);
 
     useEffect(() =>{
+
+        try {
+            
         mount(ref.current);
+        } catch (error) {
+            console.log('error en marketing app container '+error);
+        }
+
     });
 
     
