@@ -12,7 +12,12 @@ const prodConfig = {
         filename: '[name].[contenthash].js',
         publicPath: '/container/latest/',
     },
-    
+    plugins: [
+        new ModuleFederationPlugin({
+            name: 'container',
+            shared: packageJson.dependencies
+        })
+    ]
 };
 
 module.exports = merge(commonConfig, prodConfig);
