@@ -18,7 +18,7 @@ const prodConfig = {
             exposes: {
                 './MarketingApp': './src/bootstrap'
             },
-            shared: { react: { singleton: true }, "react-dom": { singleton: true }, "packgeJson": packageJson.dependencies }
+            shared: { react: { singleton: true }, "react-dom": { singleton: true } }
         })
     ]
 };
