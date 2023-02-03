@@ -7,7 +7,7 @@ import Pricing from './components/Pricing';
 
 export default () =>{
     return <div>
-        HOla!
+      Hola solo marketing
         <StylesProvider>
             <BrowserRouter>
             <Switch>
